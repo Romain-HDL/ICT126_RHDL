@@ -28,6 +28,7 @@ namespace Calculator
             op1 = AskUserForInteger("Rentrez votre premier numéro :");
             op2 = AskUserForInteger("Rentrez votre second numéro :");
 
+            //TODO What happend if op1 or op2 are not filled.
             int result = PerformCalculation(op1, op2, oper);
 
             DisplayResult(op1, oper, op2, result);
@@ -103,6 +104,7 @@ namespace Calculator
                 case '/':
                     result = mathOperation.Divide(op1, op2);
                     break;
+                //TODO Add default case
             }
 
             return result;

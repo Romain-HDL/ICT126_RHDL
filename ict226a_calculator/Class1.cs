@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator2
 {
+    //TODO Update class to static
     public class MathsBasicOperation
     {
         /// <summary>
@@ -49,6 +50,7 @@ namespace Calculator2
         /// <returns></returns>
         public int Divide(int op1, int op2)
         {
+            //TODO Manage division by zero
             return op1 / op2;
         }
     }
