@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator2
 {
-    //TODO Update class to static
-    public class MathsBasicOperation
+     class MathsBasicOperation
     {
         /// <summary>
         /// This method is designed to return the addition of 2 numbers
@@ -50,8 +49,18 @@ namespace Calculator2
         /// <returns></returns>
         public int Divide(int op1, int op2)
         {
-            //TODO Manage division by zero
-            return op1 / op2;
+            int result = 0;
+
+            try 
+            {
+                result = op1 / op2;         
+            }
+            catch
+            {
+                Console.WriteLine("La division par zéro est impossible");
+            }
+
+            return result;
         }
     }
 }

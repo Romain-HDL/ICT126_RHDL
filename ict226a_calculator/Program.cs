@@ -26,9 +26,12 @@ namespace Calculator
             } while(!operators.Contains(oper));
 
             op1 = AskUserForInteger("Rentrez votre premier numéro :");
-            op2 = AskUserForInteger("Rentrez votre second numéro :");
 
-            //TODO What happend if op1 or op2 are not filled.
+            do
+            {
+                op2 = AskUserForInteger("Rentrez votre second numéro :");
+            } while (op2 != 0);
+
             int result = PerformCalculation(op1, op2, oper);
 
             DisplayResult(op1, oper, op2, result);
@@ -104,7 +107,6 @@ namespace Calculator
                 case '/':
                     result = mathOperation.Divide(op1, op2);
                     break;
-                //TODO Add default case
             }
 
             return result;
